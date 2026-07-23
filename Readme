@@ -13,14 +13,14 @@ This project simulates a real enterprise scenario: a company with core IT servic
 
 ## 🏗️ Architecture
 
-```text
+```
 ContosoResourceGroup (East US)
 │
 ├── CoreServicesVnet (East US) — 10.20.0.0/16
-│   ├── GatewaySubnet              10.20.0.0/27
-│   ├── SharedServicesSubnet       10.20.10.0/24
-│   ├── DatabaseSubnet             10.20.20.0/24
-│   └── PublicWebServiceSubnet     10.20.30.0/24
+│   ├── GatewaySubnet            10.20.0.0/27
+│   ├── SharedServicesSubnet     10.20.10.0/24
+│   ├── DatabaseSubnet           10.20.20.0/24
+│   └── PublicWebServiceSubnet   10.20.30.0/24
 │
 ├── ManufacturingVnet (West Europe) — 10.30.0.0/16
 │   ├── ManufacturingSystemSubnet  10.30.10.0/24
@@ -42,9 +42,9 @@ ContosoResourceGroup (East US)
 ## 🛠️ Steps performed
 
 1. Created the `ContosoResourceGroup` resource group in East US.
-2. Created `CoreServicesVnet` (`10.20.0.0/16`) with 4 subnets, including a reserved `GatewaySubnet`.
-3. Created `ManufacturingVnet` (`10.30.0.0/16`) in West Europe with 4 subnets for manufacturing systems and 3 sensor networks.
-4. Created `ResearchVnet` (`10.40.0.0/16`) in Southeast Asia with 1 subnet for research systems.
+2. Created `CoreServicesVnet` (10.20.0.0/16) with 4 subnets, including a reserved `GatewaySubnet`.
+3. Created `ManufacturingVnet` (10.30.0.0/16) in West Europe with 4 subnets for manufacturing systems and 3 sensor networks.
+4. Created `ResearchVnet` (10.40.0.0/16) in Southeast Asia with 1 subnet for research systems.
 5. Verified all VNets and subnets via **All resources** and each VNet's **Subnets** blade.
 
 ## 📸 Screenshots
@@ -55,11 +55,11 @@ ContosoResourceGroup (East US)
 
 | ManufacturingVnet Subnets | ResearchVnet Subnets | All VNets Overview |
 |---|---|---|
-| ![Manufacturing Subnets](screenshots/04-manufacturingvnet-subnets.png) | ![Research Subnets](screenshots/05-researchvnet-subnets.png) | ![All VNets](screenshots/06-all-vnets-overview.png) |
+| ![Manufacturing Subnets](screenshots/04-manufacturingvnet-subnets.png) | ![Research Subnets](screenshots/05-researchvnet-subnets.png) | ![All Vnets](screenshots/06-all-vnets-overview.png) |
 
 ## 💡 Key takeaways
 
-- Azure Virtual Network is the fundamental building block for private networking in Azure — it lets resources communicate securely with each other, the internet, and on-premises networks.
+- Azure Virtual Network is the fundamental building block for private networking in Azure — it lets resources communicate securely with each other, the internet, and on-prem networks.
 - Subnets segment a VNet's address space; planning ahead (not using the whole range immediately) avoids costly re-addressing later.
 - A `GatewaySubnet` is a reserved, purpose-built subnet needed before you can attach a VPN Gateway or ExpressRoute circuit.
 
@@ -75,5 +75,4 @@ ContosoResourceGroup (East US)
 - Azure Virtual Networks & Subnets
 
 ---
-
 *This project was completed as part of hands-on Azure networking practice, building toward a Cloud/DevOps portfolio.*
