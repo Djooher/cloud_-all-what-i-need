@@ -4,7 +4,7 @@ A hands-on Azure Networking lab where I designed and deployed a multi-region vir
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project simulates a real enterprise scenario: a company with core IT services, a manufacturing site, and a research division, each needing isolated but interoperable networks in Azure.
 
@@ -17,7 +17,7 @@ I built:
 
 ---
 
-# 🏗️ Architecture
+#  Architecture
 
 ```text
 ContosoResourceGroup (East US)
@@ -40,7 +40,7 @@ ContosoResourceGroup (East US)
 
 ---
 
-# 🧩 Why this design
+#  Why this design
 
 - **Non-overlapping address spaces** — each VNet uses a distinct `/16` block (`10.20`, `10.30`, `10.40`) so they can be peered later without IP conflicts.
 
@@ -52,7 +52,7 @@ ContosoResourceGroup (East US)
 
 ---
 
-# 🛠️ Steps performed
+#  Steps performed
 
 1. Created the `ContosoResourceGroup` resource group in East US.
 2. Created `CoreServicesVnet` (`10.20.0.0/16`) with 4 subnets, including a reserved `GatewaySubnet`.
@@ -64,19 +64,21 @@ ContosoResourceGroup (East US)
 
 # 📸 Screenshots
 
-| Resource Group | CoreServicesVnet Review | CoreServicesVnet Subnets |
-|---|---|---|
-| ![Resource Group](screenshots/01-resource-group.png) | ![Core Review](screenshots/02-corevnet-review.png) | ![Core Subnets](screenshots/03-corevnet-subnets.png) |
+<img width="921" height="396" alt="image" src="https://github.com/user-attachments/assets/8e28614e-0171-4737-ad75-dcb818bad6d4" />
+creation a virtual network 
+<img width="571" height="364" alt="image" src="https://github.com/user-attachments/assets/1dfe2bbc-04b1-444a-8173-d5f99507df22" />
+<img width="729" height="403" alt="image" src="https://github.com/user-attachments/assets/5c41f58d-ee63-4755-b83e-df7d833256b3" />
 
-<br>
+<img width="678" height="431" alt="image" src="https://github.com/user-attachments/assets/6347ff18-f564-4132-b5e5-90eae30d47d8" />
 
-| ManufacturingVnet Subnets | ResearchVnet Subnets | All VNets Overview |
-|---|---|---|
-| ![Manufacturing Subnets](screenshots/04-manufacturingvnet-subnets.png) | ![Research Subnets](screenshots/05-researchvnet-subnets.png) | ![All Vnets](screenshots/06-all-vnets-overview.png) |
+<img width="826" height="183" alt="image" src="https://github.com/user-attachments/assets/3fa30d49-3a87-4cfe-9ad3-ce59bccae137" />
 
----
 
-# 💡 Key takeaways
+
+
+
+
+#  Key takeaways
 
 - Azure Virtual Network is the fundamental building block for private networking in Azure — it lets resources communicate securely with each other, the internet, and on-prem networks.
 
@@ -86,7 +88,7 @@ ContosoResourceGroup (East US)
 
 ---
 
-# 🚀 Possible next steps
+#  Possible next steps
 
 - Set up VNet peering between `CoreServicesVnet` and the other two VNets.
 - Attach a VPN Gateway to `GatewaySubnet` for a simulated hybrid connection.
@@ -94,7 +96,7 @@ ContosoResourceGroup (East US)
 
 ---
 
-# 🧰 Tools used
+#  Tools used
 
 - Azure Portal
 - Azure Virtual Networks & Subnets
